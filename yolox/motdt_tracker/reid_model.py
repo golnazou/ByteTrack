@@ -243,8 +243,8 @@ def load_reid_model(ckpt):
 
 
 def im_preprocess(image):
-    image = np.asarray(image, np.float32)
-    image -= np.array([104, 117, 123], dtype=np.float32).reshape(1, 1, -1)
+    image = np.asarray(image, float32)
+    image -= np.array([104, 117, 123], dtype=float32).reshape(1, 1, -1)
     image = image.transpose((2, 0, 1))
     return image
 
