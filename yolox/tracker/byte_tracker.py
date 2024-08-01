@@ -162,7 +162,6 @@ class BYTETracker(object):
         refind_stracks = []
         lost_stracks = []
         removed_stracks = []
-        print('I am here')
         if output_results.shape[1] == 5:
             scores = output_results[:, 4]
             bboxes = output_results[:, :4]
