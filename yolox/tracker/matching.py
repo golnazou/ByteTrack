@@ -62,10 +62,12 @@ def ious(atlbrs, btlbrs):
     if ious.size == 0:
         return ious
 
-    ious = bbox_ious(
-        np.ascontiguousarray(atlbrs, dtype=float),
-        np.ascontiguousarray(btlbrs,dtype=float)
-    )
+    ious = bbox_ious(atlbrs, btlbr)
+
+  #  ious = bbox_ious(
+      #  np.ascontiguousarray(atlbrs, dtype=float),
+      #  np.ascontiguousarray(btlbrs,dtype=float)
+  #  )
 
     return ious
 
