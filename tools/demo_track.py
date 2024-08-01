@@ -159,6 +159,7 @@ class Predictor(object):
 
         img, ratio = preproc(img, self.test_size, self.rgb_means, self.std)
         img_info["ratio"] = ratio
+        print('herrrr')
         img = torch.from_numpy(img).unsqueeze(0).float().to(self.device)
         if self.fp16:
             img = img.half()  # to FP16
