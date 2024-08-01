@@ -261,7 +261,7 @@ def extract_reid_features(reid_model, image, tlbrs):
         return torch.FloatTensor()
 
     patches = extract_image_patches(image, tlbrs)
-    patches = np.asarray([im_preprocess(cv2.resize(p, reid_model.inp_size)) for p in patches], dtype=np.float32)
+    patches = np.asarray([im_preprocess(cv2.resize(p, reid_model.inp_size)) for p in patches], dtype=float32)
 
     with torch.no_grad():
         im_var = Variable(torch.from_numpy(patches))
